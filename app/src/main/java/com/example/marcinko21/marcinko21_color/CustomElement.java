@@ -62,12 +62,14 @@ public abstract class CustomElement {
     }
 
     /** get the element's given name */
-    public String getName() {
+    public String getName()
+    {
         return this.myName;
     }
 
     /** change the color */
-    public void setColor(int color) {
+    public void setColor(int color)
+    {
 
         // ignore request if it's not a new color (this keeps the undo queue
         // clean)
@@ -79,12 +81,14 @@ public abstract class CustomElement {
     }
 
     /** get the color */
-    public int getColor() {
+    public int getColor()
+    {
         return this.myPaint.getColor();
     }
 
     /** switch to a random color */
-    public void setRandomColor() {
+    public void setRandomColor()
+    {
         int randColor = Color.rgb(myRand.nextInt(256), myRand.nextInt(256),
                 myRand.nextInt(256));
         setColor(randColor);
