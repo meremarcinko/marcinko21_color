@@ -16,7 +16,8 @@ import android.graphics.Paint;
  * @version Spring 2015
  *
  */
-public abstract class CustomElement {
+public abstract class CustomElement
+{
 
     /**
      * this is the "fudge factor" for determining whether a tap falls within a
@@ -43,7 +44,8 @@ public abstract class CustomElement {
     protected String myName = "$NO NAME$";
 
     /** the ctor requires that you give the object a name and a color */
-    public CustomElement(String name, int color) {
+    public CustomElement(String name, int color)
+    {
         // init instance variables
         setColor(color);
         this.myName = name;
@@ -82,6 +84,7 @@ public abstract class CustomElement {
 
     /** get the color */
     public int getColor()
+
     {
         return this.myPaint.getColor();
     }

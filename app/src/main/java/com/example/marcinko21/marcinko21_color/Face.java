@@ -4,9 +4,17 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
-
 import java.util.ArrayList;
 
+/**
+ * <!-- class Face -->
+ *
+ *This is the class that draws all the shapes and handles the surfaceview.
+ *
+ * @author Meredith Marcinko
+ * @version Spring 2019
+ *
+ */
 public class Face extends SurfaceView
 {
 
@@ -17,6 +25,16 @@ public class Face extends SurfaceView
     private CustomRect boxHat;
     private CustomRect baseHat;
 
+    /**
+     * External Citation
+     * Date: February 17, 2019
+     * Problem: I did not know the hexadecimals for the colors, nor did I know what
+     * colors to use
+     * Resources:
+     * I looked up online a hexidecimal converter.
+     * Solution:
+     * https://www.rapidtables.com/web/color/RGB_Color.html
+     */
     ArrayList<CustomElement> shapeList;
 
     public Face(Context context)
@@ -30,6 +48,16 @@ public class Face extends SurfaceView
         init();
     }
 
+    /**
+     * External Citation
+     * Date: February 16, 2019
+     * Problem: I was having trouble with the array and how to group all
+     * the shapes to draw them
+     * Resources:
+     * Patrick Bellosil
+     * Solution:
+     * He suggested I use an arrayList
+     */
     private void init()
     {
         setWillNotDraw(false);
@@ -58,6 +86,7 @@ public class Face extends SurfaceView
         shapeList.add(baseHat);
     }
 
+    /** This method draws all the shapes*/
     protected void onDraw(Canvas canvas)
     {
         canvas.drawColor(0xFFFFFFF);
@@ -69,6 +98,20 @@ public class Face extends SurfaceView
         }
     }
 
+    /**
+     * External Citation
+     * Date: February 17, 2019
+     * Problem: I did not
+     * Resources:
+     * I looked up online a hexidecimal converter.
+     * Solution:
+     * https://www.rapidtables.com/web/color/RGB_Color.html
+     */
+
+    /**
+     * This method finds the shape on the screen through the tapping. It looks
+     * for the x and y coordinates of the screen
+     */
     public CustomElement findShape(int x, int y)
     {
         if(rightEye.containsPoint(x,y) == true)

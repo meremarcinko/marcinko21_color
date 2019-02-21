@@ -14,7 +14,8 @@ import android.graphics.Rect;
  *
  */
 
-public class CustomCircle extends CustomElement {
+public class CustomCircle extends CustomElement
+{
 
     /** these variables define the location and radius of a circle */
     private int x;
@@ -33,7 +34,8 @@ public class CustomCircle extends CustomElement {
 
 
     @Override
-    public void drawMe(Canvas canvas) {
+    public void drawMe(Canvas canvas)
+    {
         canvas.drawCircle(x, y, radius, myPaint);  //main circle
         canvas.drawCircle(x, y, radius, outlinePaint);  //outline around circle
     }
@@ -41,7 +43,8 @@ public class CustomCircle extends CustomElement {
 
     /** for ease of calculation, just draw a box around the circle and see if the point is in that */
     @Override
-    public boolean containsPoint(int x, int y) {
+    public boolean containsPoint(int x, int y)
+    {
         //Calculate the distance between this point and the center
         int xDist = Math.abs(x - this.x);
         int yDist = Math.abs(y - this.y);
@@ -53,13 +56,15 @@ public class CustomCircle extends CustomElement {
 
     /** I knew that middle school geometry class would pay off someday */
     @Override
-    public int getSize() {
+    public int getSize()
+    {
         return (int)(Math.PI * this.radius * this.radius);
     }
 
 
     @Override
-    public void drawHighlight(Canvas canvas) {
+    public void drawHighlight(Canvas canvas)
+    {
         canvas.drawCircle(x, y, radius, highlightPaint);
         canvas.drawCircle(x, y, radius, outlinePaint);  //keep outline so it stands out
     }

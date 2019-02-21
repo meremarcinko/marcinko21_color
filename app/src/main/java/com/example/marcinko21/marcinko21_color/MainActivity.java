@@ -5,6 +5,15 @@ import android.os.Bundle;
 import android.view.SurfaceView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+/**
+ * <!-- class MainActivity -->
+ *
+ * This is the Main Activity class, where everything is created
+ *
+ * @author Meredith Marcinko
+ * @version Spring 2019
+ *
+ */
 
 public class MainActivity extends AppCompatActivity
 {
@@ -26,8 +35,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //initialize the textview with the color values
-
-
         redValue = (TextView)findViewById(R.id.redVal);
         redValue.setText("0");
 
